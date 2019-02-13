@@ -53,11 +53,11 @@ public class Drivetrain extends Subsystem {
 
         speedController3 = new VictorSP(2);
         addChild("Speed Controller 3",speedController3);
-        speedController3.setInverted(true);
+        speedController3.setInverted(false);
 
         speedController4 = new VictorSP(3);
         addChild("Speed Controller 4",speedController4);
-        speedController4.setInverted(true);
+        speedController4.setInverted(false);
 
         differentialDrive1 = new DifferentialDrive(speedController1, speedController2);
         addChild("Differential Drive 1",differentialDrive1);
