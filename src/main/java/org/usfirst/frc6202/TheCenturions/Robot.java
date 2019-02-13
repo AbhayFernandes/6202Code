@@ -111,6 +111,6 @@ public class Robot extends TimedRobot {
     @Override
     public void teleopPeriodic() {
         Scheduler.getInstance().run();
-        drivetrain.arcadeDrive(oi.joystick);
+        drivetrain.arcadeDrive(oi.joystick1);
     }
 }
