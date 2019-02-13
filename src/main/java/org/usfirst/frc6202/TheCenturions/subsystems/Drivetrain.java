@@ -57,7 +57,7 @@ public class Drivetrain extends Subsystem {
 
         speedController4 = new VictorSP(3);
         addChild("Speed Controller 4",speedController4);
-        speedController4.setInverted(false);
+        speedController4.setInverted(true);
 
         differentialDrive1 = new DifferentialDrive(speedController1, speedController2);
         addChild("Differential Drive 1",differentialDrive1);
@@ -100,11 +100,11 @@ public class Drivetrain extends Subsystem {
     // here. Call these from Commands.
 
     public void arcadeDrive(Joystick stick) {
-        double ySpeed = stick.getY();
         double xSpeed = stick.getX();
-        double zRotation = stick.getY();
-        differentialDrive1.arcadeDrive(xSpeed, zRotation);
-        differentialDrive2.arcadeDrive(xSpeed, zRotation);
+        double ySpeed = stick.getY();
+        double zSpeed = stick.getZ();
+        differentialDrive1.arcadeDrive(xSpeed, ySpeed);
+        differentialDrive2.arcadeDrive(zSpeed, zSpeed);
     }
 
     public void driveStraight(double speed){
