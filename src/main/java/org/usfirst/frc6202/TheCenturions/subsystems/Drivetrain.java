@@ -89,9 +89,10 @@ public class Drivetrain extends Subsystem {
     // here. Call these from Commands.
 
     public void arcadeDrive(Joystick stick) {
+        double ySpeed = stick.getY();
         double xSpeed = stick.getX();
-        double zRotation = stick.getY();
-        differentialDrive1.arcadeDrive(xSpeed, zRotation);
+        // double zRotation = stick.getX();
+        differentialDrive1.arcadeDrive(ySpeed, xSpeed);
     }
 
     public void driveStraight(double speed){
