@@ -118,13 +118,8 @@ public class Drivetrain extends Subsystem {
         double zSpeed = stick.getZ();
         differentialDrive1.arcadeDrive(xSpeed, ySpeed);
         differentialDrive2.arcadeDrive(xSpeed, ySpeed);
-        stick.setChannelX(4);
-        stick.setChannelY(5);
-        double xSpeed = stick.getX();
-        double ySpeed = (stick.getY() * (-1));
-        differentialDrive3.arcadeDrive(xSpeed, ySpeed);
-        }
-
+}
+    public 
     public void driveStraight(double speed){
         differentialDrive1.tankDrive(speed, speed);
     }
