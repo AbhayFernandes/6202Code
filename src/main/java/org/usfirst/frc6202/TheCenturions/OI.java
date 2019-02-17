@@ -66,10 +66,6 @@ public class OI {
         joystickButton1 = new JoystickButton(joystick1, 1);
         joystickButton1.whileHeld(new DriveStraight());
 
-        joystickButton2 = new JoystickButton(joystick1, 2);
-        joystickButton3 = new JoystickButton(joystick1, 3);
-        joystickButton4 = new JoystickButton(joystick1, 4);
-
         // SmartDashboard Buttons
         SmartDashboard.putData("AutonomousCommand", new AutonomousCommand());
         SmartDashboard.putData("DriveStraight", new DriveStraight());
