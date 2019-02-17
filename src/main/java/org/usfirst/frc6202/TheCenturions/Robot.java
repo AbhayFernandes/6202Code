@@ -112,6 +112,5 @@ public class Robot extends TimedRobot {
     public void teleopPeriodic() {
         Scheduler.getInstance().run();
         drivetrain.arcadeDrive(oi.joystick1);
-        drivetrain.Compressor(drivetrain.Compressor);
     }
 }
